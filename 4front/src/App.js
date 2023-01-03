@@ -9,7 +9,6 @@ import Albumid from "./components/albumid";
 function App() {
   return (
     <div className="App">
-
       <Title />
       <Routes>
       <Route exact path ="/" element={<Connection />}/>
@@ -17,7 +16,6 @@ function App() {
       <Route exact path = "/albumid" element={<Albumid/>}/>  
       </Routes>
       <Footer />
-
     </div>
   );
 }

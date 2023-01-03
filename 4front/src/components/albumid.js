@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 
-
 export default function albumid(props) {
   const { id } = useParams();
   const [albumId, setalbumId] = useState([]);
@@ -51,11 +50,6 @@ export default function albumid(props) {
           <button className="delete" onClick={removeAlbum}>
             Remove Album
           </button>
-          <Link to="/Album/`${id}`/update"> 
-          <button className="update" onClick={updateAlbum}>
-            Update Album
-          </button>
-          </Link>
           <Link to="/">
             <button>back</button>
           </Link>
