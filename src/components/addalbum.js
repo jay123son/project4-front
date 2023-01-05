@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
  function Addalbum() {
@@ -27,7 +26,7 @@ import { Link } from 'react-router-dom';
    const addalbum = async (albumData)=>{
     try {
         console.log(albumData);
-        const newalbum = await fetch (BASE_URL, {
+      await fetch (BASE_URL, {
             method:"post",
             headers:{
                 "Content-Type":"application/json",
@@ -42,7 +41,7 @@ import { Link } from 'react-router-dom';
     const handleSubmit = async (e) => {
        console.log(newForm);
         e.preventDefault()
-        const newalbum= await addalbum(newForm)
+        await addalbum(newForm)
        setNewForm ({
         cover: "",
         album: "",
