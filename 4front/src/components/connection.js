@@ -8,7 +8,7 @@ export default function Albuml() {
     const [album, setAlbum] = useState([]); 
 
     useEffect(() => {
-        axios.get('')
+        axios.get('https://topalbum.fly.dev/album')
           .then((response) => response.data)
           .then((response) => {
             console.log(response)
@@ -25,7 +25,7 @@ export default function Albuml() {
                 {album.map((element) => {
                     return( 
                         <div className="container">
-                            <Link to ={`album/${element._id}`}><img src={element.images}/>
+                            <Link to ={`album/${element._id}`}><img alt={"Album Cover"}src={element.images}/>
                             <div>{element.album}</div></Link>
                         </div>
                     )

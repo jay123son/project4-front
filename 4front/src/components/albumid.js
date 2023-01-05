@@ -4,22 +4,22 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 
-export default function albumid(props) {
+export default function Albumid(props) {
   const { id } = useParams();
-  const [albumId, setalbumId] = useState([]);
+  const [albumId, setAlbumId] = useState([]);
   const URL = `${id}`;
   const getalbum = async () => {
     try {
       const response = await fetch(URL);
       const albumData = await response.json();
-      setalbumid(albumData);
+      setAlbumId(albumData);
     } catch (err) {
       console.log(err);
     }
   };
   const navigate = useNavigate();
 
-  const removealbum = async () => {
+  const removeAlbum = async () => {
     try {
       const options = {
         method: "DELETE",
@@ -40,12 +40,12 @@ export default function albumid(props) {
   return (
     <div>
       <div className="container">
-        <img src={albumid.cover} />
-        <div>{albumid.album}</div>
-        <div>{albumid.artist}</div>
-        <div>{albumid.released}</div>
-        <div>{albumid.tracks}</div>
-        <div>{albumid.about}</div>
+        <img src={albumId.cover} />
+        <div>{albumId.album}</div>
+        <div>{albumId.artist}</div>
+        <div>{albumId.released}</div>
+        <div>{albumId.tracks}</div>
+        <div>{albumId.about}</div>
         <div>
           <button className="delete" onClick={removeAlbum}>
             Remove Album
