@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
     cover: "",
     album: "",
-    artist: "",
+    artists: "",
     released: "",
     tracks: "",
     about: "",
@@ -45,7 +45,7 @@ import { Link } from 'react-router-dom';
        setNewForm ({
         cover: "",
         album: "",
-        artist: "",
+        artists: "",
         released: "",
         tracks: "",
         about: "",
@@ -66,8 +66,8 @@ import { Link } from 'react-router-dom';
                 <label for="album">Album:</label>
                 <input type="text" value={newForm.album} name="album" onChange={handleChange} />
                 <br />
-                <label for="artist">Artist:</label>
-                <input type="text" value={newForm.artist} name="artist" onChange={handleChange} />
+                <label for="artist">Artists:</label>
+                <input type="text" value={newForm.artists} name="artists" onChange={handleChange} />
                 <br />
                 <label for="released">Released:</label>
                 <input type="text" value={newForm.released} name="released" onChange={handleChange} />

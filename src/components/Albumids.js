@@ -44,7 +44,7 @@ export default function Albumid(props) {
       <div className="container">
         <img src={albumId.cover} alt={"album cover"}/>
         <div>{albumId.album}</div>
-        <div>{albumId.artist}</div>
+        <div>{albumId.artists}</div>
         <div>{albumId.released}</div>
         <div>{albumId.tracks}</div>
         <div>{albumId.about}</div>
