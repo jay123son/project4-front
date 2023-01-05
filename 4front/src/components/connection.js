@@ -25,7 +25,7 @@ export default function Albuml() {
                 {album.map((element) => {
                     return( 
                         <div className="container">
-                            <Link to ={`album/${element._id}`}><img alt={"Album Cover"}src={element.images}/>
+                            <Link to ={`album/${element._id}`}><img alt={"Album Cover"}src={element.cover}/>
                             <div>{element.album}</div></Link>
                         </div>
                     )

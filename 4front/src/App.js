@@ -11,9 +11,9 @@ function App() {
     <div className="App">
       <Title />
       <Routes>
-      <Route exact path ="/" element={<Connection />}/>
-      {/* <Route exact path = "/addalbum" element={<Addalbum/>}/>
-      <Route exact path = "/albumid" element={<Albumid/>}/>   */}
+      <Route path ="/" element={<Connection />}/>
+      <Route path = "/addalbum" element={<Addalbum/>}/>
+      <Route path = "/album/:id" element={<Albumid/>}/>  
       </Routes>
       <Footer />
     </div>
