@@ -4,7 +4,7 @@ import Footer from './components/footer';
 import Title from './components/title';
 import Connection from './components/connection';
 import Addalbum from "./components/addalbum";
-import Albumid from "./components/Albumid";
+import Albumid from "./components/Albumids";
 
 function App() {
   return (
