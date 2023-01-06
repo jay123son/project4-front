@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
  function Addalbum() {
-    const BASE_URL = ''
+    const BASE_URL = 'https://topalbum.fly.dev/album/'
     const [newForm, setNewForm]= useState({
 
     cover: "",
@@ -15,7 +15,12 @@ import { Link } from 'react-router-dom';
    })
    const getalbum = async (fn) => {
     try {
-        const response = await fetch(BASE_URL);
+        const response = await fetch(BASE_URL,{
+            method: 'POST',
+            headers: {
+                'content-type':"application/json"},
+                body: JSON.stringify(newForm)
+        });
         const allalbum = await response.json();
 
         console.log(allalbum);

@@ -1,0 +1,4 @@
+<ul> {albumId.tracks.map((track,index)=>{
+          return (
+            <li key={index}>{track}</li>)
+        })}</ul>

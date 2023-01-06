@@ -1,10 +1,11 @@
 import React from "react";
+import '../App.css';
 import { useState } from "react";
 import { useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
-export default function Albuml() {
+export default function Album() {
     const [album, setAlbum] = useState([]); 
 
     useEffect(() => {
@@ -18,15 +19,15 @@ export default function Albuml() {
 
     return (
         <div>
-            <div className="button">
+            <div className="columns button is-centered my-4">
                 <Link to = '/addalbum'> <button> Add Album </button> </Link>
             </div>
             <div className="main">
                 {album.map((element) => {
                     return( 
-                        <div className="container">
-                            <Link to ={`album/${element._id}`}><img alt={"Album Cover"}src={element.cover}/>
-                            <div>{element.album}</div></Link>
+                        <div className="columns image is-centered my-4">
+                            <Link to ={`album/${element._id}`}><img className="image is-128x128" alt={"Album Cover"}src={element.cover}/>
+                            <div className="columns title is-centered my-4">{element.album}</div></Link>
                         </div>
                     )
                 })}

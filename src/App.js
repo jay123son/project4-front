@@ -5,7 +5,7 @@ import Title from './components/title';
 import Connection from './components/connection';
 import Addalbum from "./components/addalbum";
 import Albumid from "./components/Albumids";
-
+import 'bulma/css/bulma.min.css';
 function App() {
   return (
     <div className="App">
